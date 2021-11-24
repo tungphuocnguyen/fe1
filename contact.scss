@@ -1,0 +1,501 @@
+@import "./respocontact.scss";
+a{
+    font-family: "arial";
+    font-size: 11px;
+    color: #a18e72;
+}
+.main{
+    /* header */
+    
+    .header{
+        /* width: 100vw;   */
+        background-color: #3B2C25; 
+        border-bottom:1px solid #ffffff ;
+        @include tablet{
+            width: 100%;       
+        } 
+        .header_Top{
+            background-color: #251B17;
+            padding-top: 4%;
+            border-bottom:1px solid #4a362e;
+            @include tablet{
+                width: 100%;
+                padding-top: 6%;       
+            }
+            @include maxmobile{
+                padding-top: 9%;
+            }  
+            @include mobile{
+                padding-top: 12%;
+            }
+            @include minmobile{
+                padding-top: 16%;    
+            }         
+        }
+        .header_Bottom{
+            width: 1000px;
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+            border-left: 1px #60483c;
+            border-right: 1px #60483c;
+            background-color: #2f231e;
+            @include tablet{
+                margin: 0 0;
+                width: 100%;   
+            }
+            @include maxmobile{
+               flex-direction: column; 
+            }  
+            @include mobile{
+               flex-direction: column;
+               padding-top: -20%;
+               margin-bottom: -30px;
+            }
+            .header_Lightbox{
+                flex: 3.5;
+                display: flex;
+                height: 80px;
+                @include maxmobile{
+                      flex-direction: column;
+                }   
+                @include mobile{
+                    display: none;
+                }  
+                .lightbox_Img{
+                    flex: 3;
+                    margin-top: -79%;
+                    margin-left: -11%;
+                    @include maxmobile{
+                        display: none; 
+                    }   
+                }
+                .lightbox_Des{
+                    flex: 7;
+                    margin-left: -21%;
+                    margin-top: -7%;
+                    @include maxmobile{
+                         display: none;
+                    }
+                    .Light_Des{
+                        display: block;
+                        width:60px;
+                        font-size: 68px;
+                        color: #f7f4f3;
+                        font-family: "duepuntozero";
+                        font-weight: 500;
+                        .Box_Des{
+                            display: block;
+                            font-size: 18px;
+                            width: 10%;
+                            margin-top: -10%;
+                            margin-left: 130%;
+                            color: #fae1b3;
+                            font-family: "duepuntozero";
+                        }
+                    }
+                }
+            }
+            .header_Nav{
+                flex: 6.5;
+                display: flex;
+                @include maxmobile{
+                    margin-bottom: 2%;
+                }
+                @include mobile{
+                    margin-top: 20%;
+                }
+                .nav_List{
+                    display: flex;
+                    @include tablet{
+                        width: 31%;
+                    }
+                    @include mintablet{
+                        width: 22%;
+                    }
+                    @include mobile{
+                       width: 18%;
+                       margin-top: -20%;
+                       margin-left: 10%;
+                    }
+                    @include mobile{
+                        width: 18%;
+                        margin-top: -20%;
+                        margin-left: 9%;
+                    }
+                    .nav_Item:first-child{
+                        margin-left: 76%;
+                        @include mobile{
+                            margin-left: 38%;
+                        }  
+                    }
+                    .nav_Item{
+                         margin-left: 44%;
+                        p {
+                            .homelink{
+                                text-decoration: none;
+                            }
+                        }
+                        .nav_Img{
+                           margin-top: -80px;
+                        }
+                        .nav_Title{
+                           margin-top: 10px;
+                           font-family: "arial";
+                           font-size: 11px;
+                           color: #a18e72;
+                        }
+                    }
+                    .nav_Item:last-child{
+                        @include mintablet{
+                            margin-left: 45%;
+                         }
+                         @include maxmobile{
+                             margin-top: 1%;
+                        }  
+                         @include mobile{
+                            margin-left: 50%;
+                        }     
+                        .nav_item-last{
+                            position: relative;
+                            margin-left: 0%;
+                            margin-top: -2%;
+                            margin-left: -11%;
+                            .bubble_Img{
+                                position: absolute;
+                                margin-top: -110%;
+                                margin-left: -77%;
+                                @include tablet{
+                                    margin-top: -118%;
+                                    margin-left: -72%;
+                                }   
+                            }
+                            .nav_Img{
+                                margin-top: -100%;
+                                z-index: 1;
+                             }
+                             .nav_Title{
+                                margin-top: 10px;
+                                font-family: "arial";
+                                 font-size: 11px;
+                                 color: #a18e72;
+                            }
+                        }             
+                    }
+                }
+            }
+        }
+    }  
+    /* container */
+
+   .container{
+    @include tablet{
+        width: 100%;
+ } 
+    /* width: 100vw; */
+    background-color: #eeebe9;
+    .contain{
+        width: 1000px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        background-color: #f7f5f4;
+        padding-top: 19px;
+        border: 1px solid #ffffff;
+        @include tablet{
+            width: 100%;
+            border: none;
+        }
+        @include mintablet{
+           flex-direction: column;
+           border: none;
+        }
+        @include maxmobile{    
+            border: none;
+        }    
+        .contain_Left{
+            flex: 3.5;
+            @include mintablet{
+               display:none;
+             }  
+        }
+        .contain_Right{
+            flex: 6.5;
+            @include mintablet{
+                margin-left: 4%;    
+            }
+            @include mintablet{
+                margin-top: 45px;
+              }   
+            .contain_Contact{
+                font-family: "duepuntozero";
+                font-size: 32px;
+                padding: 20px 0;
+                border-bottom:1px solid rgb(182, 178, 178) ;
+            }
+            .contain_Des{
+                margin: 20px 0;
+                font-size: 13px;
+                color: #645a56;
+                font-family: "arial";
+            }
+            .contain_Call{
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                font-family: "arial";
+                font-size: 13px;
+                @include maxmobile{
+                    flex-direction: column;       
+                }  
+                @include mobile{
+                    flex-direction: column;
+                }     
+                .number{
+                 flex:4;
+                  .number_Phone{
+                      color: #342f2c;
+                    font-weight: bold;
+                    .number_Title{
+                        @include maxmobile{
+                            margin-left: 6%; 
+                        }
+                        @include mobile{
+                            margin-left: 9%;
+                        }
+                        font-weight: none;
+                        margin-left: 10%;
+                        font-weight: 400;
+                        color: #645a56;
+                    }
+                  }
+                  .number_Fax{
+                    color: #342f2c;
+                    margin-top: 10px;
+                    font-weight: bold;
+                    .number_FaxD{
+                        margin-left: 16%;
+                        font-weight: 400;
+                        color: #645a56;
+                        @include maxmobile{
+                            margin-left: 10%;
+                        }
+                        @include mobile{
+                            margin-left: 14%;
+                        }  
+                    }
+                  }
+                }
+                .social{
+                    flex:6;
+                    margin-left: -10%;
+                    @include maxmobile{
+                        margin-top: 10px;
+                        margin-left: 0px;
+                    }
+                    @include mobile{
+                        margin-top: 10px;
+                        margin-left: 0;
+                    }   
+                    .social_Skype{
+                        font-weight: bold;
+                       color: #342f2c;
+                        .skype_Title{
+                            font-weight: none;
+                            margin-left: 7%;
+                            font-weight: 400;
+                            color: #645a56;
+                            @include mobile{
+                                margin-left: 11%;
+                            }   
+                        }
+                    }
+                    .social_Twitt{
+                        color: #342f2c;
+                        margin-top: 10px;
+                        font-weight: bold;
+                        .social_TwittD{
+                            margin-left: 6%;
+                            font-weight: 400;
+                            color: #645a56;
+                            @include mobile{
+                                margin-left: 10%;
+                            }  
+                        }
+                    }
+                }
+            }
+            .contain_Form{
+                margin-top: 45px;
+                form{
+                    .form_Group{
+                        margin-top: 25px;
+                        .form_Label{
+                            font-size: 11px;
+                            font-family: "arial";
+                            color: #645a56;
+                          }
+                        .form_Input{
+                            display: block;
+                            width: 73%;
+                            margin-right: 20px;
+                            padding: 8px 0;
+                            outline: none;
+                            border: 1px solid rgb(204, 204, 204);
+                            margin-top: 10px;
+                        }
+                        .form_Textare{
+                            display: block;
+                            width: 73%;
+                            margin-right: 22px;
+                            padding: 14% 0;
+                            margin-bottom: 20px;
+                            outline: none;
+                            border: 1px solid rgb(204, 204, 204);
+                            margin-top: 10px;
+                        } 
+                    }
+                    .form_Buttons{
+                        margin-top: 15px;
+                        margin-left: 58%;
+                        margin-bottom: 135px;
+                       .btn-submit{
+                        font-family: "arial";
+                        font-size: 11px;
+                        width: 100px;
+                        height: 30px;
+                        color:#30241f;
+                        background-color: #cdc4be;
+                        border-radius:1px;
+                        border: 1px solid #aba198;
+                        font-weight: 500;
+                        cursor: pointer;
+                        outline: none;
+                         }
+                    }
+                }
+            }
+        }
+    }
+   }
+     /* footer */
+   .footer{
+    background-color: #30241F; 
+    .footer_Main{
+        width: 1000px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        background-color: #3B2C25;
+        @include tablet{
+            width: 100%;
+            border: none;
+        }
+        @include maxmobile{
+            flex-direction: column;
+        }
+        @include mobile{
+            flex-direction: column;
+        }     
+        .footer_Img{
+            flex: 3.5;
+            background-color: #251B17;
+            img{
+                padding: 2% 0 19% 27%;
+                @include maxmobile{
+                    padding: 8% 8% 8% 38%; 
+                }
+                @include mobile{
+                    padding: 8% 8% 8% 32%;
+                }
+                @include minmobile{
+                    padding: 8% 8% 8% 28%;
+                }
+            }
+        }
+        .footer_Des{
+            flex: 6.5;
+            display: flex;
+            @include maxmobile{
+                display: none;
+            }
+            .footer_Des-Left{
+                flex: 5;
+                .footer_Font{
+                    display: block;
+                    padding: 11% 30px 0 11%;
+                    font-size: 11px;
+                    color: #947664;
+                    span{
+                        color: white;
+                    }
+                    @include mintablet{
+                        padding: 11% 30px 0 6%;
+                    } 
+                }
+                .footer_Ic{
+                    display: block;
+                    padding: 2% 30px 0px 11%;
+                    font-size: 11px;
+                    color: #947664;
+                    span{
+                        color: white;
+                    }
+                    @include mintablet{
+                        padding: 11% 30px 0 6%;
+                    } 
+                }
+            }
+            .footer_Des-Right{
+                flex: 5;
+                .footer_Copy{
+                    display: block;
+                    text-align: right;
+                    padding: 12% 16% 0 0;
+                    font-size: 11px;
+                    color: #947664;
+                    span{
+                        margin-left: 6px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
