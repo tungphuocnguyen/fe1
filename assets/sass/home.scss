@@ -1,15 +1,15 @@
-@import "./respocontact.scss";
+@import "./responsive.scss";
 .main{
     // header
     .header{
         /* width: 100vw;   */
-        background-color: #3B2C25; 
+        background-color: $background-main; 
         border-bottom:1px solid #ffffff ;
         @include tablet{
             width: 100%;       
         } 
-        .header_Top{
-            background-color: #251B17;
+        .header_top{
+            background-color: $background-bold;
             padding-top: 4%;
             border-bottom:1px solid #4a362e;
             @include tablet{
@@ -26,13 +26,13 @@
                 padding-top: 15%;
             }
         }
-        .header_Bottom{
+        .header_bottom{
             width: 1000px;
             max-width: 100%;
             margin: 0 auto;
             border-left: 1px #60483c;
             border-right: 1px #60483c;
-            background-color: #2f231e;
+            background-color: $background-header-bottom;
             @include tablet{
                 margin: 0 0;
                 width: 100%;   
@@ -43,13 +43,13 @@
             @include mobile{
                flex-direction: column;
             }
-            .header_Nav{
+            .header_nav{
                 margin-left: 30%;
                 display: flex;
                 @include maxmobile{
                     margin-left: -10%;
                 } 
-                .nav_List{
+                .nav_list{
                     display: flex;
                     @include tablet{
                         width: 31%;
@@ -63,12 +63,12 @@
                     }   
                      @include mobile{
                        width: 18%;
-                       margin-left: 11%;
+                       margin: 0 0 5% 11%; 
                     }
                      @include minmobile{
                         margin-left: 11%;
                     }     
-                     .nav_Item:first-child{
+                     .nav_item:first-child{
                         margin-left: 100%;
                         @include tablet{
                             margin-left: 40%;
@@ -88,14 +88,13 @@
                         .nav_item-first{
                             margin-left: 86%;
                             position: relative;
-                            .bubb_Img{
+                            .bubb_img{
                                 position: absolute;
-                                margin-top: -1400%;
-                                margin-left: -800%;
+                                margin: -1400% 0 0 -800%;
                             }
                         }
                     }
-                    .nav_Item:nth-child(2){
+                    .nav_item:nth-child(2){
                         margin-left: 80%;
                         @include tablet{
                             margin-left: 60%;
@@ -110,7 +109,7 @@
                           margin-left: 90%;
                         }
                     }
-                    .nav_Item{
+                    .nav_item{
                          margin-left: 60%;
                          @include tablet{
                             margin-left: 40%;
@@ -121,19 +120,17 @@
                          @include maxmobile{
                             margin-left: 40%;
                           }   
-                        .nav_Img{
+                        .nav_img{
                            margin-top: -80px;
                         }
-                        .nav_Title{
+                        .nav_title{
                            margin-top: 10px;
                            font-family: "arial";
                            font-size: 11px;
                            color: #a18e72;
+                           text-transform: uppercase;
                            a{
                               text-decoration: none;
-                              font-family: "arial";
-                              font-size: 11px;
-                              color: #a18e72;
                            }
                         }
                     }
@@ -148,7 +145,7 @@
                     flex-direction: column;
                     display: none;
                   }  
-                .header_Lightbox{
+                .header_lightbox{
                     flex:3.5;
                     width: 0%;
                     display: flex;
@@ -162,42 +159,39 @@
                     @include mobile{
                         display: none;
                     }  
-                    .lightbox_Img{
-                        margin-left: -11%;
-                        margin-top: -52%;
-                        margin-bottom: -36%;
+                    .lightbox_img{
+                        margin: -52% 0 -36% -11%;
                         @include maxmobile{
                             display: none;
                         }  
                     }
-                    .lightbox_Des{
-                        margin-left: -23%;
+                    .lightbox_description{
                         height: 55%;
-                        margin-top: 6%;
                         padding: 20px 30px 0 0px;
                         border-right: 1px solid #4f3b32;
-                        margin-bottom: 45px;
+                        margin:6% 0 45px -23% ;
                         @include maxmobile{
                             margin-left: 50%;
                             border: none;
                             width: 80%;
                         }
-                        .Light_Des{
+                        .light_description{
                             font-family: "duepuntozero";
                             font-size: 68px;
                             color: #e7dfdb;
                             display: block;
+                            text-transform: capitalize;
                             @include mintablet{
                                 margin-left: -20%; 
                             }
                              @include maxmobile{
                                 margin-left: 20%;
                             }
-                            .Box_Des{
+                            .box_description{
+                                text-transform: uppercase;
                                 font-size: 18px;
                                 display: block;
                                 color: #fae1b3;
-                                font-family: "duepuntozero";
                                 font-weight: 400;
                                 margin-left: 60%; 
                             }
@@ -206,13 +200,14 @@
                 }
                 .header_description{
                     flex: 6.5;
+                   
                     @include mintablet{
                         margin-left: 24%;
                         width: 100%;
                     }
                      @include maxmobile{
                          width: 90%;
-                        margin-left: 4%;
+                         margin-left: 4%;
                     }
                     .header_description-top{
                         margin-top: 50px;
@@ -232,7 +227,7 @@
                     .header_description-bottom{
                         margin-top: 10px;
                         font-size: 18px;
-                        color: #eeebe9;
+                        color: $background-container;
                         font-family: "helvaltice";
                         @include maxmobile{
                             padding-bottom: 10px;
@@ -244,13 +239,13 @@
     }
     // container  
     .container{
-        background-color: #eeebe9;
+        background-color: $background-container;
         .contain{
             width: 1000px;
             max-width: 100%;
             margin: 0 auto;
             display: flex;
-            background-color: #f7f5f4;
+            background-color: $background-contain;
             padding-top: 19px;
             border: 1px solid #ffffff;
             @include tablet{
@@ -281,9 +276,6 @@
                     width: 90%;
                     @include maxmobile{
                         flex-direction: column;
-                    } 
-                    @include maxmobile{
-                        flex-direction: column;
                         width: 90%;
                         margin-left: 4%;
                     } 
@@ -299,16 +291,15 @@
                             font-family: "duepuntozero";
                             border-bottom: 1px solid #cec5c0;
                             width: 80%;
-                            color: #2f231e;
+                            color: $background-header-bottom;
                         }
                         .block_left-item{
                             display: flex;
                             margin-top: 45px;
-                            .item_img{
-                            }
                             .item_description{
                                 margin-left: 15px;
                                 .item_description-title{
+                                    text-transform: capitalize;
                                     font-size: 30px;
                                     font-family: "duepuntozero";
                                     color: #745459;
@@ -318,7 +309,7 @@
                                     margin-top: 15px;
                                     font-size: 13px;
                                     font-family: "arial";
-                                    color: #645a56;
+                                    color: $color-call-two;
                                 }
                             }
                         }
@@ -352,13 +343,23 @@
                             bottom: -40px;
                         }
                         .block_right-name{
-                            margin-top: 40px;
-                            margin-left: 48%;
                             font-size: 15px;
                             font-family: "arial";
-                            color: #2f231e;
+                            color: $background-header-bottom;
                             font-weight: 600;
+                            margin:40px 0 0 48%;
+                            text-transform: capitalize;
+                            @include mintablet{
+                                margin-left: 40%;
+                            } 
+                            @include maxmobile{
+                                margin-left: 70%;
+                            }
+                            @include mobile{
+                                margin-left: 60%;
+                            } 
                             .block_right-mail{
+                                text-transform: uppercase;
                                 font-size: 10px;
                                 font-family: "arial";
                                 color: #89451f;
@@ -379,8 +380,9 @@
                     .button_title{
                         font-size: 41px;
                         font-family: "duepuntozero";
-                        color: #2f231e;
+                        color: $background-header-bottom;
                         padding:28px 0;
+                        text-transform: capitalize;
                         @include mobile{
                         margin-top: 10px;
                         font-size: 22px;
@@ -429,13 +431,12 @@
                     }
                 }
                 .contain_right-design{
-                    margin-left: 36%;
-                    margin-top: 10px;
-                    margin-bottom: 100px;
                     font-size: 13px;
                     font-family: "arial";
                     font-weight:600;
                     color: #4e4d4d;
+                    margin: 10px 0 100px 36%;
+                    text-transform: capitalize;
                     @include mintablet{
                         margin-left: 18%;
                     }
@@ -457,16 +458,16 @@
     }
     // footer
     .footer{
-        background-color: #30241F; 
+        background-color: $footer-two; 
         @include tablet{
             width: 100%;  
         } 
-        .footer_Main{
+        .footer_main{
             width: 1000px;
             max-width: 100%;
             margin: 0 auto;
             display: flex;
-            background-color: #3B2C25;
+            background-color: $background-main;
             @include tablet{
                 width: 100%;
                 border: none;
@@ -477,9 +478,9 @@
             @include mobile{
                 flex-direction: column;
             }     
-            .footer_Img{
+            .footer_img{
                 flex: 3.5;
-                background-color: #251B17;
+                background-color: $background-bold;
                 img{
                     padding: 2% 0 19% 27%;
                     @include maxmobile{
@@ -490,22 +491,23 @@
                     }    
                 }
             }
-            .footer_Des{
+            .footer_description{
                 flex: 6.5;
                 display: flex;
+                text-transform: uppercase;
                 @include maxmobile{
                     display: none;
                    }
                 @include mobile{
                     display: none;     
                 }    
-                .footer_Des-Left{
+                .footer_description-left{
                     flex: 5;
-                    .footer_Font{
+                    .footer_font{
                         display: block;
                         padding: 11% 30px 0 11%;
                         font-size: 11px;
-                        color: #947664;
+                        color: $footer-one;
                         span{
                             color: white;   
                         }
@@ -513,11 +515,11 @@
                             padding: 11% 30px 0 6%;
                         } 
                     }
-                    .footer_Ic{
+                    .footer_icon{
                         display: block;
                         padding: 2% 30px 0px 11%;
                         font-size: 11px;
-                        color: #947664;
+                        color: $footer-one;
                         span{
                             color: white;
                         }
@@ -526,14 +528,14 @@
                         } 
                     }
                 }
-                .footer_Des-Right{
+                .footer_description-right{
                     flex: 5;
-                    .footer_Copy{
+                    .footer_copy{
                         display: block;
                         text-align: right;
                         padding: 12% 16% 0 0;
                         font-size: 11px;
-                        color: #947664;
+                        color: $footer-one;
                         span{
                             margin-left: 6px;
                             color: white; 
@@ -542,5 +544,5 @@
                 }
             }
         }
-       }
+       }   
 }
