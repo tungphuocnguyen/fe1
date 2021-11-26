@@ -1,0 +1,17 @@
+
+@font-face {
+    font-family: "duepuntozero";
+    src: url('../font/UTM\ Duepuntozero.ttf') format('truetype')
+}
+@font-face {
+    font-family: "arial";
+    src: url('../font/Arial_GEO.TTF') format('truetype')
+}
+@font-face {
+    font-family: "helvaltice";
+    src: url('../font/Helvetica.ttf') format('truetype')
+}
+@font-face {
+    font-family: "georgia";
+    src: url('../font/Georgia\ Italic.ttf') format('truetype')
+}

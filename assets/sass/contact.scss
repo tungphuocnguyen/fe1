@@ -1,4 +1,6 @@
-@import "./respocontact.scss";
+
+@import "./responsive.scss";
+
 a{
     font-family: "arial";
     font-size: 11px;
@@ -7,15 +9,15 @@ a{
 .main{
     /* header */
     
-    .header{
+    .headerc{
         /* width: 100vw;   */
-        background-color: #3B2C25; 
+        background-color: $background-main;
         border-bottom:1px solid #ffffff ;
         @include tablet{
             width: 100%;       
         } 
-        .header_Top{
-            background-color: #251B17;
+        .header_topc{
+            background-color: $background-bold;
             padding-top: 4%;
             border-bottom:1px solid #4a362e;
             @include tablet{
@@ -32,14 +34,14 @@ a{
                 padding-top: 16%;    
             }         
         }
-        .header_Bottom{
+        .header_bottomc{
             width: 1000px;
             max-width: 100%;
             margin: 0 auto;
             display: flex;
             border-left: 1px #60483c;
             border-right: 1px #60483c;
-            background-color: #2f231e;
+            background-color: $background-header-bottom;
             @include tablet{
                 margin: 0 0;
                 width: 100%;   
@@ -50,53 +52,52 @@ a{
             @include mobile{
                flex-direction: column;
                padding-top: -20%;
-               margin-bottom: -30px;
+               margin-bottom: -20px;
             }
-            .header_Lightbox{
+            .header_lightboxc{
                 flex: 3.5;
                 display: flex;
                 height: 80px;
                 @include maxmobile{
-                      flex-direction: column;
+                    flex-direction: column;
                 }   
                 @include mobile{
                     display: none;
                 }  
-                .lightbox_Img{
+                .lightbox_imgc{
                     flex: 3;
-                    margin-top: -79%;
-                    margin-left: -11%;
+                    margin: -79% 0 0 -11%;
                     @include maxmobile{
                         display: none; 
                     }   
                 }
-                .lightbox_Des{
+                .lightbox_descriptionc{
                     flex: 7;
-                    margin-left: -21%;
-                    margin-top: -7%;
+                    margin: -7% 0 0 -21%;
                     @include maxmobile{
                          display: none;
                     }
-                    .Light_Des{
+                    .light_descriptionc{
+                        text-transform: capitalize;
                         display: block;
                         width:60px;
                         font-size: 68px;
                         color: #f7f4f3;
                         font-family: "duepuntozero";
                         font-weight: 500;
-                        .Box_Des{
+                        .box_descriptionc{
+                            text-transform: uppercase;
                             display: block;
                             font-size: 18px;
                             width: 10%;
-                            margin-top: -10%;
-                            margin-left: 130%;
+                            margin: -10% 0 0 130%;
                             color: #fae1b3;
                             font-family: "duepuntozero";
                         }
                     }
                 }
             }
-            .header_Nav{
+            .header_navc{
                 flex: 6.5;
                 display: flex;
                 @include maxmobile{
@@ -105,7 +106,7 @@ a{
                 @include mobile{
                     margin-top: 20%;
                 }
-                .nav_List{
+                .nav_listc{
                     display: flex;
                     @include tablet{
                         width: 31%;
@@ -114,39 +115,34 @@ a{
                         width: 22%;
                     }
                     @include mobile{
-                       width: 18%;
-                       margin-top: -20%;
-                       margin-left: 10%;
-                    }
-                    @include mobile{
                         width: 18%;
-                        margin-top: -20%;
-                        margin-left: 9%;
+                        margin: -20% 0 0 9%;
                     }
-                    .nav_Item:first-child{
+                    .nav_itemc:first-child{
                         margin-left: 76%;
                         @include mobile{
                             margin-left: 38%;
                         }  
                     }
-                    .nav_Item{
+                    .nav_itemc{
+                        text-transform: uppercase;
                          margin-left: 44%;
                         p {
-                            .homelink{
+                            .homelinkc{
                                 text-decoration: none;
                             }
                         }
-                        .nav_Img{
+                        .nav_imgc{
                            margin-top: -80px;
                         }
-                        .nav_Title{
+                        .nav_titlec{
                            margin-top: 10px;
                            font-family: "arial";
                            font-size: 11px;
                            color: #a18e72;
                         }
                     }
-                    .nav_Item:last-child{
+                    .nav_itemc:last-child{
                         @include mintablet{
                             margin-left: 45%;
                          }
@@ -156,25 +152,21 @@ a{
                          @include mobile{
                             margin-left: 50%;
                         }     
-                        .nav_item-last{
+                        .nav_item-lastc{
                             position: relative;
-                            margin-left: 0%;
-                            margin-top: -2%;
-                            margin-left: -11%;
-                            .bubble_Img{
+                            margin: -2% 0 0 -11%;
+                            .bubble_imgc{
                                 position: absolute;
-                                margin-top: -110%;
-                                margin-left: -77%;
+                                margin: -110% 0 0 -77%;
                                 @include tablet{
-                                    margin-top: -118%;
-                                    margin-left: -72%;
+                                    margin: -118% 0 0 -72%;
                                 }   
                             }
-                            .nav_Img{
+                            .nav_imgc{
                                 margin-top: -100%;
                                 z-index: 1;
                              }
-                             .nav_Title{
+                             .nav_titlec{
                                 margin-top: 10px;
                                 font-family: "arial";
                                  font-size: 11px;
@@ -193,13 +185,13 @@ a{
         width: 100%;
  } 
     /* width: 100vw; */
-    background-color: #eeebe9;
+    background-color: $background-container;
     .contain{
         width: 1000px;
         max-width: 100%;
         margin: 0 auto;
         display: flex;
-        background-color: #f7f5f4;
+        background-color: $background-contain;
         padding-top: 19px;
         border: 1px solid #ffffff;
         @include tablet{
@@ -213,38 +205,38 @@ a{
         @include maxmobile{    
             border: none;
         }    
-        .contain_Left{
+        .contain_left{
             flex: 3.5;
             @include mintablet{
                display:none;
              }  
         }
-        .contain_Right{
+        .contain_right{
             flex: 6.5;
             @include mintablet{
-                margin-left: 4%;    
+                margin: 45px 0 0 4%;    
             }
-            @include mintablet{
-                margin-top: 45px;
-              }   
-            .contain_Contact{
+            .contain_contact{
+                text-transform: capitalize;
                 font-family: "duepuntozero";
                 font-size: 32px;
                 padding: 20px 0;
                 border-bottom:1px solid rgb(182, 178, 178) ;
+                width: 95%;
             }
-            .contain_Des{
+            .contain_description{
                 margin: 20px 0;
                 font-size: 13px;
-                color: #645a56;
+                color: $color-call-two;
                 font-family: "arial";
             }
-            .contain_Call{
+            .contain_call{
                 margin-top: 30px;
                 display: flex;
                 justify-content: space-between;
                 font-family: "arial";
                 font-size: 13px;
+                text-transform: capitalize;
                 @include maxmobile{
                     flex-direction: column;       
                 }  
@@ -253,10 +245,10 @@ a{
                 }     
                 .number{
                  flex:4;
-                  .number_Phone{
-                      color: #342f2c;
+                  .number_phone{
+                      color: $color-call-first;
                     font-weight: bold;
-                    .number_Title{
+                    .number_title{
                         @include maxmobile{
                             margin-left: 6%; 
                         }
@@ -266,17 +258,17 @@ a{
                         font-weight: none;
                         margin-left: 10%;
                         font-weight: 400;
-                        color: #645a56;
+                        color: $color-call-two;
                     }
                   }
-                  .number_Fax{
-                    color: #342f2c;
+                  .number_fax{
+                    color: $color-call-first;
                     margin-top: 10px;
                     font-weight: bold;
-                    .number_FaxD{
+                    .number_fax-description{
                         margin-left: 16%;
                         font-weight: 400;
-                        color: #645a56;
+                        color: $color-call-two;
                         @include maxmobile{
                             margin-left: 10%;
                         }
@@ -290,34 +282,32 @@ a{
                     flex:6;
                     margin-left: -10%;
                     @include maxmobile{
-                        margin-top: 10px;
-                        margin-left: 0px;
+                        margin: 10px 0 0 0px;
                     }
                     @include mobile{
-                        margin-top: 10px;
-                        margin-left: 0;
+                        margin: 10px 0 0 0;
                     }   
-                    .social_Skype{
+                    .social_skype{
                         font-weight: bold;
-                       color: #342f2c;
-                        .skype_Title{
+                       color: $color-call-first;
+                        .skype_title{
                             font-weight: none;
                             margin-left: 7%;
                             font-weight: 400;
-                            color: #645a56;
+                            color: $color-call-two;
                             @include mobile{
                                 margin-left: 11%;
                             }   
                         }
                     }
-                    .social_Twitt{
-                        color: #342f2c;
+                    .social_twitt{
+                        color: $color-call-first;
                         margin-top: 10px;
                         font-weight: bold;
-                        .social_TwittD{
+                        .social_twitt-description{
                             margin-left: 6%;
                             font-weight: 400;
-                            color: #645a56;
+                            color: $color-call-two;
                             @include mobile{
                                 margin-left: 10%;
                             }  
@@ -325,46 +315,43 @@ a{
                     }
                 }
             }
-            .contain_Form{
+            .contain_form{
                 margin-top: 45px;
                 form{
-                    .form_Group{
+                    .form_group{
                         margin-top: 25px;
-                        .form_Label{
+                        text-transform: uppercase;
+                        .form_label{
                             font-size: 11px;
                             font-family: "arial";
-                            color: #645a56;
+                            color: $color-call-two;
                           }
-                        .form_Input{
+                        .form_input{
                             display: block;
                             width: 73%;
-                            margin-right: 20px;
                             padding: 8px 0;
                             outline: none;
                             border: 1px solid rgb(204, 204, 204);
-                            margin-top: 10px;
+                            margin: 10px 20px 0 0;
                         }
-                        .form_Textare{
+                        .form_textare{
                             display: block;
                             width: 73%;
-                            margin-right: 22px;
                             padding: 14% 0;
-                            margin-bottom: 20px;
                             outline: none;
                             border: 1px solid rgb(204, 204, 204);
-                            margin-top: 10px;
+                            margin: 10px 22px 20px 0;
                         } 
                     }
-                    .form_Buttons{
-                        margin-top: 15px;
-                        margin-left: 58%;
-                        margin-bottom: 135px;
+                    .form_buttons{
+                        margin: 15px 0 135px 58%;
                        .btn-submit{
+                        text-transform: uppercase;
                         font-family: "arial";
                         font-size: 11px;
                         width: 100px;
                         height: 30px;
-                        color:#30241f;
+                        color:$footer-two;
                         background-color: #cdc4be;
                         border-radius:1px;
                         border: 1px solid #aba198;
@@ -380,13 +367,13 @@ a{
    }
      /* footer */
    .footer{
-    background-color: #30241F; 
-    .footer_Main{
+    background-color: $footer-two; 
+    .footer_main{
         width: 1000px;
         max-width: 100%;
         margin: 0 auto;
         display: flex;
-        background-color: #3B2C25;
+        background-color:$background-main;
         @include tablet{
             width: 100%;
             border: none;
@@ -397,9 +384,9 @@ a{
         @include mobile{
             flex-direction: column;
         }     
-        .footer_Img{
+        .footer_img{
             flex: 3.5;
-            background-color: #251B17;
+            background-color: $background-bold;
             img{
                 padding: 2% 0 19% 27%;
                 @include maxmobile{
@@ -413,19 +400,20 @@ a{
                 }
             }
         }
-        .footer_Des{
+        .footer_description{
             flex: 6.5;
             display: flex;
+            text-transform: uppercase;
             @include maxmobile{
                 display: none;
             }
-            .footer_Des-Left{
+            .footer_description-left{
                 flex: 5;
-                .footer_Font{
+                .footer_font{
                     display: block;
                     padding: 11% 30px 0 11%;
                     font-size: 11px;
-                    color: #947664;
+                    color: $footer-one;
                     span{
                         color: white;
                     }
@@ -433,11 +421,11 @@ a{
                         padding: 11% 30px 0 6%;
                     } 
                 }
-                .footer_Ic{
+                .footer_icon{
                     display: block;
                     padding: 2% 30px 0px 11%;
                     font-size: 11px;
-                    color: #947664;
+                    color: $footer-one;
                     span{
                         color: white;
                     }
@@ -446,14 +434,14 @@ a{
                     } 
                 }
             }
-            .footer_Des-Right{
+            .footer_description-right{
                 flex: 5;
-                .footer_Copy{
+                .footer_copy{
                     display: block;
                     text-align: right;
                     padding: 12% 16% 0 0;
                     font-size: 11px;
-                    color: #947664;
+                    color: $footer-one;
                     span{
                         margin-left: 6px;
                         color: white;
